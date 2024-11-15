@@ -1,0 +1,128 @@
+/* Fuente personalizada */
+@font-face {
+    font-family: 'I_Found_My_Valentine'; /* Nombre personalizado para la fuente */
+    src: url('assets/fonts/I_Found_My_Valentine.ttf') format('truetype'); /* Ruta relativa a la carpeta fonts */
+    font-weight: normal; /* Opcional */
+    font-style: normal; /* Opcional */
+}
+
+/* Estilo general del cuerpo */
+body {
+    background-color: #654c61;
+    color: white;
+    font-family: 'I_Found_My_Valentine', sans-serif; /* Asegúrate de incluir una fuente de respaldo */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de los encabezados */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem; /* Ajuste en el tamaño */
+}
+
+/* Estilo de las imágenes en la galería */
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Estilo de la galería */
+.gallery_container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* Estilo de las imágenes dentro de la galería */
+.gallery_container img {
+    height: 100%;
+}
+
+/* Estilo para el botón de play/pausa */
+#play-music {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'I_Found_My_Valentine', sans-serif;
+}
+
+/* Estilo para el widget de Spotify */
+.spotify-widget {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px); 
+    height: 80px;
+    z-index: 1000; /* Encima de otros elementos */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* E que el contenido sobresalga */
+    padding: 0;
+}
+
+/* Estilo del iframe de Spotify */
+.spotify-widget iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Estilos para el overlay del video */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.overlay video {
+    max-width: 90%;
+    max-height: 70%;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+/* Contenido dentro del overlay */
+.overlay-content {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Título dentro del overlay */
+.overlay-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Botón dentro del overlay */
+.overlay-content button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e279a5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'I_Found_My_Valentine', sans-serif;
+    letter-spacing: 1px; /* Espaciado entre letras */
+}

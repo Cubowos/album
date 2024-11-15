@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Travel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Overlay del video -->
+    <div id="video-overlay" class="overlay">
+        <video id="intro-video" autoplay controls playsinline>
+            <source src="assets/videos/skill_issue.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="overlay-content">
+            <h2>Así empezó todo</h2>
+            <button id="close-overlay">Cerrar</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>Our Moments Together</h1>
+    </header>
+    <div class="gallery_container"></div>
+
+    <div class="spotify-widget">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1ypIGG6l9c2Sk5u0RYhlTZ?utm_source=generator&theme=0"
+                allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+    <script src="scripts/videoOverlay.js"></script> <!-- Script para el overlay del video -->
+    <script src="scripts/gallery.js"></script> <!-- Script para manejar la galería de imágenes -->
+</body>
+</html>
